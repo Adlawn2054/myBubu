@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fef6f8;
+    font-family: 'Arial', sans-serif;
+}
+
+.hidden {
+    display: none;
+}
+
+.container {
+    text-align: center;
+    position: relative;
+}
+
+/* Chat box and characters */
+.chatbox {
+    margin-bottom: -80px;
+    width: 250px;
+    position: relative;
+    left: 70px;
+    z-index: 2;
+}
+
+.chathead {
+    width: 100%;
+    height: auto;
+}
+
+.chat-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    font-size: 14px;
+    font-weight: bold;
+    width: 80%;
+    text-align: center;
+}
+
+.characters {
+    width: 300px;
+    height: auto;
+}
+
+/* Buttons */
+#startBtn, #prevBtn, #nextBtn, #prevToStoryBtn, #nextToTravelBtn, #prevToLoveBtn, #finishBtn {
+    margin-top: 20px;
+    padding: 12px 30px;
+    font-size: 16px;
+    color: white;
+    background-color: #ff7070;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background-color: #ff5050;
+}
+
+.character-wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 20px;
+    position: relative;
+}
+
+.character {
+    position: relative;
+    width: 150px;
+    text-align: center;
+}
+
+.character-image .characters-together {
+    width: 200px;
+    height: auto;
+}
+
+.chathead-small {
+    width: 100px;
+    height: auto;
+}
+
+.chat-text-small {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    font-size: 12px;
+    font-weight: bold;
+    width: 90%;
+    text-align: center;
+}
+
+input[type="text"] {
+    margin-top: 10px;
+    padding: 5px;
+    width: 90%;
+    border: 2px solid #ff7070;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Narration scenes */
+.narration-wrapper {
+    text-align: center;
+    padding: 20px;
+}
+
+.narration-text {
+    font-size: 18px;
+    color: #444;
+    margin-bottom: 20px;
+    font-weight: bold;
+    padding: 0 10px;
+}
+
+.narration-image {
+    width: 300px;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.buttons {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}

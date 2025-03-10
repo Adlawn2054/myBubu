@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bubu and Dudu Story</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- First Intro Screen -->
+    <div id="introScreen">
+      <div class="chatbox">
+        <img src="images/chathead.png" alt="Chat Bubble" class="chathead">
+        <p class="chat-text">Are you ready for our short story?</p>
+      </div>
+      <img src="images/Bubu and dudu.png" alt="Bubu and Dudu" class="characters">
+      <button id="startBtn">Start</button>
+    </div>
+
+    <!-- Second Screen: Story with Rename -->
+    <div id="storyScreen" class="hidden">
+      <div class="character-wrapper">
+        <div class="character left">
+          <img src="images/leftchathead.png" alt="Chat Bubble" class="chathead-small">
+          <p class="chat-text-small" id="bubuText">Hi! I'm Bubu (or rename me)</p>
+          <input type="text" id="bubuInput" placeholder="Rename Bubu">
+        </div>
+        <div class="character-image">
+          <img src="images/together.png" alt="Together" class="characters-together">
+        </div>
+        <div class="character right">
+          <img src="images/chathead.png" alt="Chat Bubble" class="chathead-small">
+          <p class="chat-text-small" id="duduText">Hi! I'm Dudu (or rename me)</p>
+          <input type="text" id="duduInput" placeholder="Rename Dudu">
+        </div>
+      </div>
+      <div class="buttons">
+        <button id="prevToIntroBtn">Prev</button>
+        <button id="nextToLoveBtn">Next</button>
+      </div>
+    </div>
+
+    <!-- Sequential Story Screens -->
+    <div id="loveScreen" class="hidden">
+      <div class="narration-wrapper">
+        <p class="narration-text" id="loveNarration">Bubu and Dudu love each other!</p>
+        <img src="images/happy.png" alt="Happy Bubu and Dudu" class="narration-image">
+      </div>
+      <div class="buttons">
+        <button id="prevToStoryBtn">Prev</button>
+        <button id="nextToTravelBtn">Next</button>
+      </div>
+    </div>
+
+    <div id="travelScreen" class="hidden">
+      <div class="narration-wrapper">
+        <p class="narration-text">They love traveling (even if they're broke, they still travel).</p>
+        <img src="images/travel.png" alt="Traveling Bubu and Dudu" class="narration-image">
+      </div>
+      <div class="buttons">
+        <button id="prevToLoveBtn">Prev</button>
+        <button id="nextToEatBtn">Next</button>
+      </div>
+    </div>
+
+    <div id="eatScreen" class="hidden">
+      <div class="narration-wrapper">
+        <p class="narration-text">Sometimes, they love eating together — but Dudu always steals Bubu's food!</p>
+        <img src="images/eat.png" alt="Bubu and Dudu Eating" class="narration-image">
+      </div>
+      <div class="buttons">
+        <button id="prevToTravelBtn">Prev</button>
+        <button id="nextToCuddleBtn">Next</button>
+      </div>
+    </div>
+
+    <div id="cuddleScreen" class="hidden">
+      <div class="narration-wrapper">
+        <p class="narration-text">And they really love cuddling like this!</p>
+        <img src="images/cuddle.jpg" alt="Bubu and Dudu Cuddling" class="narration-image">
+      </div>
+      <div class="buttons">
+        <button id="prevToEatBtn">Prev</button>
+        <button id="nextToFightBtn">Next</button>
+      </div>
+    </div>
+
+    <div id="fightScreen" class="hidden">
+      <div class="narration-wrapper">
+        <p class="narration-text">One day, they had a huge argument</p>
+        <img src="images/fight.png" alt="Bubu and Dudu fight" class="narration-image">
+      </div>
+      <div class="buttons">
+        <button id="prevToCuddleBtn">Prev</button>
+        <button id="nextToArgumentBtn">Next</button>
+      </div>
+    </div>
+
+    <div id="argumentScreen" class="hidden">
+      <div class="narration-wrapper">
+        <img src="images/argument.jpg" alt="Bubu and Dudu fight" class="narration-image">
+      </div>
+      <div class="buttons">
+        <button id="prevToFightBtn">Prev</button>
+        <button id="nextToHateBtn">Next</button>
+      </div>
+    </div>
+
+    <div id="hateScreen" class="hidden">
+      <div class="narration-wrapper">
+        <p class="narration-text">"I hate you Dudu and I don't love you anymore"</p>
+        <img src="images/hate.jpg" alt="Bubu and Dudu fight" class="narration-image">
+      </div>
+      <div class="buttons">
+        <button id="prevToArgumentBtn">Prev</button>
+        <button id="nextToSadBtn">Next</button>
+      </div>
+    </div>
+
+    <div id="sadScreen" class="hidden">
+      <div class="narration-wrapper">
+        <p class="narration-text">Dudu Feels Sad</p>
+        <img src="images/sad.png" alt="sad" class="narration-image">
+      </div>
+      <div class="buttons">
+        <button id="prevToHateBtn">Prev</button>
+        <button id="nextToMissBtn">Next</button>
+      </div>
+    </div>
+
+    <div id="missScreen" class="hidden">
+      <div class="narration-wrapper">
+        <p class="narration-text">Dudu Misses Bubu</p>
+        <img src="images/miss.jpg" alt="sad" class="narration-image">
+      </div>
+      <div class="buttons">
+        <button id="prevToSadBtn">Prev</button>
+        <button id="nextToCallBtn">Next</button>
+      </div>
+    </div>
+
+    <div id="callScreen" class="hidden">
+        <div class="narration-wrapper">
+          <p class="narration-text">Dudu Calls Bubu cause he misses her and feels sorry cause it's his fault😢</p>
+          <img src="images/call.gif" alt="sad" class="narration-image">
+        </div>
+        <div class="buttons">
+          <button id="prevToMissBtn">Prev</button>
+          <button id="nextToAngryBtn">Next</button>
+        </div>
+      </div>
+  
+
+      <div id="angryScreen" class="hidden">
+        <div class="narration-wrapper">
+          <p class="narration-text">Bubu still angry 😢</p>
+          <img src="images/angry.gif" alt="sad" class="narration-image">
+        </div>
+        <div class="buttons">
+          <button id="prevToCallBtn">Prev</button>
+          <button id="nextToLonelyBtn">Next</button>
+        </div>
+      </div>
+  
+      <div id="lonelyScreen" class="hidden">
+        <div class="narration-wrapper">
+          <p class="narration-text">Dudu feels lonely 😢</p>
+          <img src="images/lonely.gif" alt="sad" class="narration-image">
+        </div>
+        <div class="buttons">
+          <button id="prevToAngryBtn">Prev</button>
+          <button id="nextToAgainBtn">Next</button>
+        </div>
+      </div>
+
+      
+      <div id="againScreen" class="hidden">
+        <div class="narration-wrapper">
+          <p class="narration-text">So Dudu calls Bubu again</p>
+          <img src="images/again.gif" alt="sad" class="narration-image">
+        </div>
+        <div class="buttons">
+          <button id="prevToLonelyBtn">Prev</button>
+          <button id="nextToPissBtn">Next</button>
+        </div>
+      </div>
+
+      <div id="pissScreen" class="hidden">
+        <div class="narration-wrapper">
+          <p class="narration-text">And now Bubu answer the call</p>
+          <img src="images/piss.jpg" alt="sad" class="narration-image">
+        </div>
+        <div class="buttons">
+          <button id="prevToAgainBtn">Prev</button>
+          <button id="nextToSorryBtn">Next</button>
+        </div>
+      </div>
+
+      <div id="sorryScreen" class="hidden">
+        <div class="narration-wrapper">
+          <p class="narration-text">Dudu Says Sorry </p>
+          <img src="images/sorry.gif" alt="sad" class="narration-image">
+        </div>
+        <div class="buttons">
+          <button id="prevToPissBtn">Prev</button>
+          <button id="nextToPakitpotBtn">Next</button>
+        </div>
+      </div>
+
+      <div id="pakipotScreen" class="hidden">
+        <div class="narration-wrapper">
+          <p class="narration-text">Bubu still sulking and angry </p>
+          <img src="images/pakipot.gif" alt="sad" class="narration-image">
+        </div>
+        <div class="buttons">
+          <button id="prevToSorryBtn">Prev</button>
+          <button id="nextToKissBtn">Next</button>
+        </div>
+      </div>
+
+      <div id="kissScreen" class="hidden">
+        <div class="narration-wrapper">
+          <p class="narration-text">But then Bubu kiss Dudu and now they're okay</p>
+          <img src="images/kiss.gif" alt="sad" class="narration-image">
+        </div>
+        <div class="buttons">
+          <button id="prevToPakipotBtn">Prev</button>
+          <button id="nextToFinalBtn">Next</button>
+        </div>
+      </div>
+
+      <div id="finalScreen" class="hidden">
+        <div class="narration-wrapper">
+          <p class="narration-text">And now They're Both Happy, Dudu always loves Bubu and he's afraid of losing her</p>
+          <img src="images/final.gif" alt="sad" class="narration-image">
+        </div>
+        <div class="buttons">
+          <button id="prevToKissBtn">Prev</button>
+          <button id="nextToEndBtn">Next</button>
+        </div>
+      </div>
+
+      <div id="endScreen" class="hidden">
+        <div class="narration-wrapper">
+          <p class="narration-text">Then End Hope you Like it 🥰🤗. How about you? Do you love your Bubu?</p>
+          <img src="images/end.jpg" alt="sad" class="narration-image">
+        </div>
+        <div class="buttons">
+          <button id="prevToFinalBtn">Prev</button>
+          <button id="nextToMore2Btn"><a href="yes.html">Yes</a></button>
+          <button id="nextToMore2Btn"><a href="no.html">No?</a></button>
+        </div>
+      </div>
+
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
